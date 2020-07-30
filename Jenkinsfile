@@ -5,6 +5,7 @@ pipeline {
 	steps {
 	checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'git', url: 'https://github.com/sunilvirat/exa.git']]])
 	}
+		}
 stage('ls') {
 	steps {
 	    sh label: '', script: 'ls'
